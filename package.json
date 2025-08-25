@@ -1,0 +1,15 @@
+{
+  "name": "example-recursive-factorial-ts",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@resonatehq/sdk": "^0.0.0-SNAPSHOT-8b0f00fdccf49b8e6b8343df877446b2d80c3588"
+  }
+}
