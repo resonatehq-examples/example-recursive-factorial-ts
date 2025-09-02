@@ -10,6 +10,6 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@resonatehq/sdk": "^0.0.0-SNAPSHOT-8b0f00fdccf49b8e6b8343df877446b2d80c3588"
+    "@resonatehq/sdk": "^0.7.1"
   }
 }

@@ -1,8 +1,14 @@
-# Recursive factorial | Resonate TypeScript SDK example application
+![resonate example application readme banner](/assets/resonate-example-app-readme-banner.png)
+
+# Recursive factorial
+
+**Resonate TypeScript SDK**
 
 This example showcases Resonate's ability to durably invoke functions recursively.
 
-![distributed factorial gif](./distributed-factorial-ts.gif)
+Instructions on [How to run this example](#how-to-run-this-example) are below.
+
+![distributed factorial gif](/assets/distributed-factorial-ts.gif)
 
 ## The problem
 
