@@ -140,4 +140,4 @@ vite.config.ts.timestamp-*
 
 .cursor
 resonate.db
-bun.lock
+*.lock
