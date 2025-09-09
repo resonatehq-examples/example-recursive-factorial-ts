@@ -46,7 +46,7 @@ And this means it is relatively trivial for a function to call itself recursivel
 The second thing to know is that a Durable Promise is a write once register.
 A Durable Promise is permanent and once it has a value, it will never change.
 
-To be a permanent write once register, each Durable Promise must have a unique ID in the system. Therefore the result of Durable Promise becomes perfectly cacheable, with no cache invalidation required.
+To be a permanent write once register, each Durable Promise must have a unique ID in the system. Therefore the result of a Durable Promise becomes perfectly cacheable, with no cache invalidation required.
 
 Again, consider calculating factorials.
 If you ever have to calculate the factorial of 5, you can attach the "factorial-5" promise ID to that invocation.
