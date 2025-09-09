@@ -17,15 +17,15 @@ There are two problems to address here.
 The first problem exists within the context of platforms that provide "Durable Execution".
 
 Most of these platforms force the usage of a "workflow" function and "step" / "activity" functions.
-The reason is that the "workflow" function is paired with an event history, qeuue, or journal which is used during a replay of the execution to know where to resume the execution without repeating side-effects.
+The reason is that the "workflow" function is paired with an event history, queue, or journal which is used during a replay of the execution to know where to resume the execution without repeating side-effects.
 
 This separation makes for a messy and expensive process for a Workflow function to directly call itself.
-It is messy in that the code is usually overly complicated, and it is expensive in that there multiple events per invocation entered into the history, each of them often requiring a network call.
+It is messy in that the code is usually overly complicated, and it is expensive in that there are multiple events per invocation entered into the history, each of them often requiring a network call.
 So, how do you have simple, clean, but also durable code?
 
 The second problem is more general, which is how do you cache results for expensive operations and not repeat them?
 
-Consider calculating factorials. The result of any given factorial is always the same. The higher the factorial, the more expensive the operation is.
+Consider calculating factorials. The result of any given factorial is always the same. The greater the factorial, the more expensive the operation is.
 It would be ideal to cache the result of an expensive operation in case it is needed again right?
 
 But where is the cache? What does the code look like to access it? How do you check if there is already a result there?
@@ -37,7 +37,7 @@ Resonate's solution to both of these problems is the Durable Promise.
 The first thing to know is that there is a 1:1 relationship between a Durable Promise and a function invocation.
 That is — when a function is invoked, a single Durable Promise is created.
 The Durable Promise represents the invocation event.
-And it remains in a PENDING status until it is either RESOLVED with a result or REJECTED by the business process.
+And it remains in a PENDING state until it is either RESOLVED with a result or REJECTED by the business process.
 
 This means that there is no distinction between "workflow" functions and "step"/"activity" functions. There are just Durable Functions.
 
@@ -46,11 +46,11 @@ And this means it is relatively trivial for a function to call itself recursivel
 The second thing to know is that a Durable Promise is a write once register.
 A Durable Promise is permanent and once it has a value, it will never change.
 
-To be a permanent write once register, each Durable Promise must have a unique ID in the system. Therefore the results of Durable Promise become perfectly cacheable, with no cache invalidation required.
+To be a permanent write once register, each Durable Promise must have a unique ID in the system. Therefore the result of a Durable Promise becomes perfectly cacheable, with no cache invalidation required.
 
 Again, consider calculating factorials.
 If you ever have to calculate the factorial of 5, you can attach the "factorial-5" promise ID to that invocation.
-Once that has been calculated the promise is resolve permanently storing the value inside of it.
+Once that has been calculated the promise will resolve permanently storing the value inside of it.
 
 If any other operation needs the value of factorial 5, it can use the promise ID "factorial-5" and immediately receive the result.
 
@@ -99,7 +99,7 @@ So, moving forward, if any other operation in the application needs the result o
 Run the Resonate Server:
 
 ```shell
-resonate serve
+resonate dev
 ```
 
 Run multiple instances of the factorial worker (recommend 3):
