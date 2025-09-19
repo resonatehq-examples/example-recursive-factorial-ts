@@ -102,6 +102,12 @@ Run the Resonate Server:
 resonate dev
 ```
 
+Install dependencies:
+
+```shell
+bun install
+```
+
 Run multiple instances of the factorial worker (recommend 3):
 
 ```shell
