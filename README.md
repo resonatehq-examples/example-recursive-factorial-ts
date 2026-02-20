@@ -119,3 +119,9 @@ Calculate a factorial
 ```shell
 bun run factorialClient.ts 6
 ```
+
+## Learn More
+
+- [Resonate Documentation](https://docs.resonatehq.io)
+- [How Durable Promises Work](https://docs.resonatehq.io/evaluate/how-it-works)
+- [TypeScript SDK Guide](https://docs.resonatehq.io/develop/typescript)
