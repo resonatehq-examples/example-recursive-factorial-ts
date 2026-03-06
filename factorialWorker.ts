@@ -13,11 +13,11 @@ function* factorial(ctx: Context, n: number): Generator<any, number, any> {
   const result = yield* ctx.rpc(
     "factorial",
     n - 1,
-    ctx.options({ target: "poll://any@factorial-workers", id: `factorial-${n-1}` })
+    ctx.options({ target: "poll://any@factorial-workers" }),
   );
   assert(
     typeof result === "number",
-    `Expected result to be a number, got ${typeof result}`
+    `Expected result to be a number, got ${typeof result}`,
   );
 
   return n * result;
