@@ -141,3 +141,5 @@ vite.config.ts.timestamp-*
 .cursor
 resonate.db
 *.lock
+package-lock.json
+.DS_Store

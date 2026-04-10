@@ -1,7 +1,8 @@
-import { Resonate, Context } from "@resonatehq/sdk";
+import { Resonate, type Context } from "@resonatehq/sdk";
 import assert from "assert";
 
-const resonate = Resonate.remote({
+const resonate = new Resonate({
+  url: "http://localhost:8001",
   group: "factorial-workers",
 });
 
