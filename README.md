@@ -39,7 +39,7 @@ That is — when a function is invoked, a single Durable Promise is created.
 The Durable Promise represents the invocation event.
 And it remains in a PENDING state until it is either RESOLVED with a result or REJECTED by the business process.
 
-This means that there is no distinction between "workflow" functions and "step"/"activity" functions. There are just Durable Functions.
+This means that there is no distinction between "workflow" functions and "step"/"activity" functions. Every function invocation is durable by default.
 
 And this means it is relatively trivial for a function to call itself recursively without the code looking messy, and without that operation being expensive in terms of bloating an event history and unnecessary network calls.
 
