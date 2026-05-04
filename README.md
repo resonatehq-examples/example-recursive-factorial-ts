@@ -1,4 +1,10 @@
-![resonate example application readme banner](/assets/resonate-example-app-readme-banner.png)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.png">
+    <img alt="Recursive Factorial — Resonate example" src="./assets/banner-dark.png">
+  </picture>
+</p>
 
 # Recursive factorial
 
