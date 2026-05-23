@@ -6,6 +6,12 @@
   </picture>
 </p>
 
+<p align="center">
+  <a href="https://resonatehq.github.io/examples-ci/">
+    <img src="https://img.shields.io/endpoint?url=https://resonatehq.github.io/examples-ci/status/example-recursive-factorial-ts.json" alt="examples-ci status">
+  </a>
+</p>
+
 # Recursive factorial
 
 **Resonate TypeScript SDK**
